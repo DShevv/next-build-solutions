@@ -1,0 +1,29 @@
+.logo {
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.image {
+  width: 64px;
+  height: 64px;
+}
+
+.caption {
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--bg-1-100);
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.subtitle {
+  font-size: 12.2px;
+  line-height: 140%;
+}
