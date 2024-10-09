@@ -1,3 +1,4 @@
+import Feedback from "./components/Feedback/Feedback";
 import Hero from "./components/Hero/Hero";
 import Map from "./components/Map/Map";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <Hero />
       <Map />
+      <Feedback />
     </main>
   );
 }

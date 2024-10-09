@@ -1,0 +1,36 @@
+.field {
+  display: flex;
+  align-items: center;
+  width: 428px;
+  height: 120px;
+  padding: 20px 24px;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--accent-2-700);
+
+  border: 1px solid var(--accent-2-700);
+  outline: none;
+}
+
+.field::placeholder {
+  color: var(--grey);
+}
+
+.field.error {
+  border-color: red;
+  color: red;
+}
+
+.field:disabled {
+  border-color: var(--grey);
+  color: var(--grey);
+  pointer-events: none;
+}
+
+.field:focus {
+  border-color: var(--accent-500);
+  box-shadow: 0 0 8px 0 rgba(233, 117, 80, 0.3);
+}
