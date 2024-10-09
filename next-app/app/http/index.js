@@ -5,7 +5,7 @@ const api = axios.create({
   headers: {
     "Access-Control-Allow-Credentials": true,
   },
-  baseURL: "http://localhost:3005",
+  baseURL: process.env.API_URL,
 });
 
 export default api;
