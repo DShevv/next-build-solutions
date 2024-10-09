@@ -22,7 +22,7 @@ body {
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background-color: darkslategray;
+  background-color: var(--bg-1-100);
 }
 
 * {

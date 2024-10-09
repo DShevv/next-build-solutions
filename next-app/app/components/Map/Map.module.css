@@ -1,0 +1,13 @@
+.map {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 140px;
+  max-width: 1356px;
+  width: 100%;
+  height: 480px;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+}
