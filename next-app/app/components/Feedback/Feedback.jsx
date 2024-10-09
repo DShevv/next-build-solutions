@@ -18,7 +18,7 @@ const Feedback = () => {
 
   return (
     <section className={styles.container}>
-      <Image src={picture} alt="Интерьер дома" />
+      <Image src={picture} className={styles.image} alt="Интерьер дома" />
       <Formik
         initialValues={{
           phone: "",

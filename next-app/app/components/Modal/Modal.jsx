@@ -35,7 +35,7 @@ const Modal = ({ ...other }) => {
           e.stopPropagation();
         }}
       >
-        <Image src={pic} alt="Интерьер дома" />
+        <Image src={pic} className={styles.image} alt="Интерьер дома" />
 
         <Formik
           initialValues={{

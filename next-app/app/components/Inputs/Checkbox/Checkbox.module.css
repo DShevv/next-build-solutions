@@ -46,3 +46,14 @@
   color: var(--accent-2-700);
   user-select: none;
 }
+
+@media (max-width: 1355px) {
+  .container {
+    gap: 8px;
+  }
+  .text {
+    font-size: 13.4px;
+    line-height: 130%;
+    max-width: 305px;
+  }
+}
