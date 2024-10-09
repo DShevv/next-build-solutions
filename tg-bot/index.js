@@ -1,15 +1,18 @@
 import express from "express";
 import { sendFeedback } from "./bot.js";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.json());
 
+app.use(cors());
+
 app.post("/feedback", async (req, res) => {
   try {
     const { phone, comment } = req.body;
 
-    if (!phone || !comment) {
+    if (!phone) {
       return res.status(400).send("Недостаточно параметров");
     }
     console.log(phone, comment);

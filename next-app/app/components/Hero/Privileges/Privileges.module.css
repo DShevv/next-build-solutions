@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 544px;
+  height: fit-content;
 }
 
 .item {

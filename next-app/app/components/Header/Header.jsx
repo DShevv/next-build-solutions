@@ -1,6 +1,7 @@
 import Logo from "../Logo/Logo";
 import styles from "./Header.module.css";
 import Button from "../Button/Button";
+import LinkButton from "../Links/LinkButton/LinkButton";
 
 const Header = () => {
   return (
@@ -21,7 +22,9 @@ const Header = () => {
             <div className={styles.value}>пн – пт: с 09:00 до 18:00</div>
             <div className={styles.value}>сб – вс: с 10:00 до 16:00</div>
           </div>
-          <Button secondary>Узнать стоимость</Button>
+          <LinkButton secondary href={{ query: { modal: "1" } }}>
+            Узнать стоимость
+          </LinkButton>
         </div>
       </div>
     </header>

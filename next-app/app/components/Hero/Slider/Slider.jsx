@@ -5,6 +5,7 @@ import styles from "./Slider.module.css";
 import Button from "../../Button/Button";
 
 import "swiper/css";
+import LinkButton from "../../Links/LinkButton/LinkButton";
 
 const Slider = () => {
   const pagination = {
@@ -34,7 +35,9 @@ const Slider = () => {
         <h2 className={styles.subtitle}>
           Без головной боли и отклонений от сметы строительства
         </h2>
-        <Button>Узнать стоимость</Button>
+        <LinkButton href={{ query: { modal: "1" } }}>
+          Узнать стоимость
+        </LinkButton>
       </SwiperSlide>
       <SwiperSlide>
         <h2 className={styles.title}>
@@ -44,7 +47,9 @@ const Slider = () => {
           В своей работе мы применяем современные технологии
           и специализированное строительное оборудование
         </h3>
-        <Button>Узнать стоимость</Button>
+        <LinkButton href={{ query: { modal: "1" } }}>
+          Узнать стоимость
+        </LinkButton>
       </SwiperSlide>
       <SwiperSlide>
         <h2 className={styles.title}>
@@ -54,7 +59,9 @@ const Slider = () => {
         <h3 className={styles.subtitle}>
           Мы оперативно выполняем весь спектр строительных работ
         </h3>
-        <Button>Узнать стоимость</Button>
+        <LinkButton href={{ query: { modal: "1" } }}>
+          Узнать стоимость
+        </LinkButton>
       </SwiperSlide>
       <div className="pagination"></div>
     </Swiper>

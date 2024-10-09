@@ -8,8 +8,14 @@ import PhoneInput from "../Inputs/PhoneInput/PhoneInput";
 import CommentInput from "../Inputs/CommentInput/CommentInput";
 import Checkbox from "../Inputs/Checkbox/Checkbox";
 import Button from "../Button/Button";
+import { useState } from "react";
+import Loader from "../Loader/Loader";
+import api from "@/app/http";
+import validateFeedback from "@/app/assets/utils/validateFeedback";
 
 const Feedback = () => {
+  const [status, setStatus] = useState("idle");
+
   return (
     <section className={styles.container}>
       <Image src={picture} alt="Интерьер дома" />
@@ -19,9 +25,32 @@ const Feedback = () => {
           comment: "",
           isAgree: false,
         }}
+        validate={validateFeedback}
+        validateOnBlur={false}
+        validateOnChange={false}
+        onSubmit={async (values) => {
+          setStatus("loading");
+          const res = await api.post("/feedback", {
+            phone: values.phone,
+            comment: values.comment,
+          });
+
+          if (res?.status === 200) {
+            setTimeout(() => {
+              setStatus("success");
+              setTimeout(() => {
+                setStatus("idle");
+              }, 2000);
+            }, 2000);
+
+            return;
+          }
+
+          setStatus("idle");
+        }}
       >
         {(formik) => {
-          const { values, setFieldValue } = formik;
+          const { values, errors, setFieldValue } = formik;
           console.log(values);
           return (
             <Form>
@@ -40,6 +69,7 @@ const Feedback = () => {
                   name="phone"
                   placeholder="+375 (99) 999-99-99"
                   mask="+375 (99) 999-99-99"
+                  isError={errors.phone ? 1 : 0}
                   onChange={(e) => {
                     const value = e.target.value || "";
                     const changedValue = value
@@ -64,7 +94,29 @@ const Feedback = () => {
                   name="isAgree"
                   text="Согласие на обработку персональных данных"
                 />
-                <Button type="submit">Отправить</Button>
+                <Button type="submit" disabled={!values.isAgree}>
+                  {status === "loading" ? (
+                    <Loader />
+                  ) : status === "success" ? (
+                    <svg
+                      width="18"
+                      height="13"
+                      viewBox="0 0 18 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 1L6 12L1 7"
+                        stroke="#fff"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  ) : (
+                    "Отправить"
+                  )}
+                </Button>
               </div>
             </Form>
           );

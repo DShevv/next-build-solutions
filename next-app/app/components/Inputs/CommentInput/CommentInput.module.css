@@ -13,6 +13,7 @@
 
   border: 1px solid var(--accent-2-700);
   outline: none;
+  resize: none;
 }
 
 .field::placeholder {
