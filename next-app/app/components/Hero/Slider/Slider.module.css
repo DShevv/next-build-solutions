@@ -1,0 +1,23 @@
+.slider {
+  width: 747px;
+  cursor: default;
+  position: static !important;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-family: var(--font3);
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 130%;
+  color: var(--bg-1-100);
+}
+
+.subtitle {
+  margin-bottom: 32px;
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 140%;
+  color: var(--bg-1-100);
+}

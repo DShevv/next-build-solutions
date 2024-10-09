@@ -30,3 +30,30 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 64px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  width: 64px;
+  height: 8px;
+}
+
+.bullet {
+  width: 8px;
+  height: 8px;
+  background-color: var(--bg-1-100);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+}
+
+.bullet.active {
+  width: 24px;
+  border-radius: 43px;
+  background-color: var(--accent-500);
+}
