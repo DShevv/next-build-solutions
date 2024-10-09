@@ -1,0 +1,23 @@
+.map {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 140px;
+  max-width: 1356px;
+  width: 100%;
+  height: 480px;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1355px) {
+  .map {
+    margin: 0 20px;
+    margin-top: 72px;
+    width: calc(100% - 40px);
+
+    height: 230px;
+  }
+}
