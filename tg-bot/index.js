@@ -9,7 +9,7 @@ app.post("/feedback", async (req, res) => {
   try {
     const { phone, comment } = req.body;
 
-    if (!phone || !comment) {
+    if (!phone) {
       return res.status(400).send("Недостаточно параметров");
     }
     console.log(phone, comment);
