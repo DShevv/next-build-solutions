@@ -35,3 +35,10 @@
 .link:not(:hover):not(:focus):not(:disabled) .arrow {
   color: var(--accent-500);
 }
+
+@media (max-width: 1355px) {
+  .link {
+    font-size: 18px;
+    line-height: 111%;
+  }
+}

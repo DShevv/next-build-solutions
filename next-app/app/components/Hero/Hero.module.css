@@ -14,3 +14,16 @@
   display: flex;
   gap: 65px;
 }
+
+@media (max-width: 1355px) {
+  .hero {
+    padding-top: 82px;
+    padding-bottom: 68px;
+  }
+
+  .wrapper {
+    margin: 0 20px;
+    gap: 24px;
+    flex-direction: column;
+  }
+}

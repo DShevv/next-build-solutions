@@ -43,3 +43,24 @@
   line-height: 140%;
   color: var(--bg-1-50);
 }
+
+.phone {
+  object-fit: contain;
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 1355px) {
+  .value {
+    display: none;
+  }
+
+  .wrapper {
+    margin: 0 20px;
+  }
+
+  .header {
+    height: 58px;
+    border-bottom: none;
+  }
+}

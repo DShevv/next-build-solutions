@@ -27,3 +27,27 @@
   font-size: 12.2px;
   line-height: 140%;
 }
+
+@media (max-width: 1355px) {
+  .logo {
+    width: fit-content;
+  }
+  .image {
+    width: 42px;
+    height: 42px;
+  }
+
+  .caption {
+    margin-bottom: 3px;
+  }
+
+  .title {
+    font-size: 12.2px;
+    line-height: 130%;
+  }
+
+  .subtitle {
+    font-size: 10px;
+    line-height: 130%;
+  }
+}

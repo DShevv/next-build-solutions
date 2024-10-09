@@ -21,3 +21,23 @@
   line-height: 140%;
   color: var(--bg-1-100);
 }
+
+@media (max-width: 1355px) {
+  .slider {
+    width: 100%;
+    max-width: 375px;
+  }
+
+  .title {
+    margin-bottom: 12px;
+
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  .subtitle {
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 130%;
+  }
+}

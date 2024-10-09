@@ -27,7 +27,7 @@ const Slider = () => {
       modules={[Pagination, Autoplay]}
       autoplay={{ delay: 3000, disableOnInteraction: true }}
     >
-      <SwiperSlide>
+      <SwiperSlide className={styles.slide}>
         <h1 className={styles.title}>
           Создадим ваш идеальный дом в установленные сроки и с 10-летней
           гарантией
@@ -39,7 +39,7 @@ const Slider = () => {
           Узнать стоимость
         </LinkButton>
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className={styles.slide}>
         <h2 className={styles.title}>
           Мы создаем надежные и современные дома для вашего уютного проживания
         </h2>
@@ -51,7 +51,7 @@ const Slider = () => {
           Узнать стоимость
         </LinkButton>
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className={styles.slide}>
         <h2 className={styles.title}>
           В нашей команде работают квалифицированные сотрудники с опытом работы
           от 5 лет

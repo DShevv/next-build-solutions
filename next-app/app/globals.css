@@ -65,3 +65,25 @@ body {
   position: fixed;
   overflow-y: hidden;
 }
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1355px) {
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile {
+    display: initial;
+  }
+
+  body {
+    overflow-y: hidden;
+  }
+
+  .pagination {
+    bottom: 24px;
+  }
+}
