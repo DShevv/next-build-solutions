@@ -1,9 +1,12 @@
 import express from "express";
 import { sendFeedback } from "./bot.js";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.json());
+
+app.use(cors());
 
 app.post("/feedback", async (req, res) => {
   try {
