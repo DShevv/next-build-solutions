@@ -30,7 +30,7 @@ const Feedback = () => {
         validateOnChange={false}
         onSubmit={async (values) => {
           setStatus("loading");
-          const res = await api.post("/api/feedback", {
+          const res = await api.post("http://89.22.234.225:3005/feedback", {
             phone: values.phone,
             comment: values.comment,
           });
