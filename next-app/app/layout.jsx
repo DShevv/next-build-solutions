@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "./assets/fonts/fonts.css";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 export const metadata = {
   title: "Строительные решения",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
